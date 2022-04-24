@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    添加百科词条
+{% endblock %}
+
+{% block main %}
+<table id="lsbk">
+    <thead>
+        <tr>
+            <td>标题</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for baike in baikes %}
+                <tr>
+                <td>{{ baike.title }}</td>
+                </tr>
+        {% endfor %}
+    </tbody>
+ </table>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    添加百科词条
+{% endblock %}
+
+{% block main %}
+<form action="/entry/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+        <button class="addbtn" type="submit">添加百科</button>
+    </p>
+</form>
+
+{% endblock %}
